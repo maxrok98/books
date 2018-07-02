@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	 <meta charset="utf-8">
+	 <style type="text/css">
+	 	body{
+	 		padding: 0px;
+	 		margin: 0px;
+	 		background-image: url(back.jpg);
+	 		background-size: 100%;
+	 		background-repeat: no-repeat;
+	 		background-attachment:fixed;
+	 		background-position: center top;
+	 	}
+	 	h1, h3{
+	 		font-family: Comic Sans MS;
+	 		color: #660033;
+	 	}
+	 	/*navigation*/
+	 	ul {
+			margin: 0;
+			padding: 0;
+		}
+		ul li {
+			list-style-type: none;
+		}
+		a {
+			text-decoration: none;
+		}
+		p {
+			font-size: 13px;
+			line-height: 1.3em;
+		}
+		.container {
+			margin: 0 auto;
+			width: 960px;
+		}
+
+		/* HEADER */
+		.header {
+			padding: 50px 0;
+			background-color: yellowgreen;
+		}
+		.header h1,
+		.header h2 {
+			color: greenyellow;
+			text-align: center;
+		}
+
+		/* NAVIGATION */
+		.page-navigation {
+			background-color: #222;
+			border-color: #101010;
+			min-height: 64px;
+		}
+		.page-navigation li {
+			float: left;
+			width: 100px;
+		}
+		.page-navigation a {
+			display: block;
+			color: #9d9d9d;
+			line-height: 4em;
+			font-weight: bold;
+			text-align: center;
+		}
+		.page-navigation li a:hover {
+			color: yellowgreen;
+			background-color: black;
+		}
+
+		/* LOGIN FORM */
+		.login {
+			padding: 15px 0;
+			float: right;
+		}
+		.login input[type="text"],
+		.login input[type="password"] {
+			padding: 5px;
+			margin-right: 5px;
+			border: 1px solid transparent;
+			border-radius: 5px;
+			outline: none;
+		}
+		.login input[type="submit"] {
+			padding: 5px 15px;
+			border: 1px solid lightgrey;
+			border-radius: 5px;
+		}
+		.login input[type="submit"]:hover,
+		button:hover {
+			background-color: darkgrey;
+			color: white;
+		}
+
+		/*main*/
+
+		.collections {
+	overflow: auto;
+}
+.collection-title {
+	padding-bottom: 5px;
+	border-bottom: 1px solid #777;
+	font-size: 36px;
+}
+.collection-title small {
+	color: #777;
+	font-size: 70%;
+}
+.collection-item-outer {
+	display: inline-block;
+	float: left;
+	padding-left: 5px;
+	padding-right: 5px;
+	width: 33.33%;
+	box-sizing: border-box;
+}
+.collections > div:first-child {
+	padding-left: 0;
+	padding-right: 10px;
+}
+.collections > div:last-child {
+	padding-right: 0;
+	padding-left: 10px;
+}
+.collection-item {
+	border: 1px solid #959595;
+}
+.collection-item img,
+.collection-item video {
+	width: 100%;
+}
+.collection-text {
+	padding: 0 20px 20px 20px;
+}
+.collection-text h3 {
+	color: yellowgreen;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.collection-text p {
+	height: 80px;
+	overflow: hidden;
+}
+.collection-text button {
+	padding: 10px;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	outline: none;
+}
+
+
+		.why{
+			background-color: white;
+			opacity: 1;
+			margin: 20px auto;
+			width: 960px;
+			border: 2px dashed red;
+			text-align: center;
+			height: 400px;
+		}
+		.car{
+			float: right;
+			margin-right: 30px;
+		}
+		.books{
+			float: left;
+			margin-left: 40px;
+		}
+		.janre{
+			display: inline-block;
+		}
+		.janre img{
+			width: 235px;
+		}
+		.janre p{
+			font-size: 30px;
+			font-family: Comic Sans MS;
+			text-align: center;
+		}
+		footer{
+			padding-top: 20px;
+			font-size: 15px;
+			height: 60px;
+			width: 100%;
+			background-color: #ffffff;
+			opacity: 0.5;
+		}
+		.janre{
+		    opacity: 1;
+		    -webkit-transform: scale(1,1);
+		    -webkit-transition-timing-function: ease-out;
+		    -webkit-transition-duration: 550ms;
+		    -moz-transform: scale(1,1);
+		    -moz-transition-timing-function: ease-out;
+		    -moz-transition-duration: 550ms;
+		}
+		.janre img:hover{
+			-webkit-transform: scale(1.2,1.2);
+		    -webkit-transition-timing-function: ease-out;
+		    -webkit-transition-duration: 550ms;
+		    -moz-transform: scale(1.2,1.2);
+		    -moz-transition-timing-function: ease-out;
+		    -moz-transition-duration: 550ms;
+		}
+	 </style>
+</head>
+<body>
+	<h1 align="center">"Буква"</h1>
+	<h3 align="center">Книжний магазин</h3>
+	<nav class="page-navigation">
+		<div class="container">
+			<ul>
+				<li><a href="../index.html">Головна</a></li>
+				<li><a href="books/books.html">Книги</a></li>
+				<li><a href="../contakt.html">Контакти</a></li>
+			</ul>
+			<!-- LOGIN FORM -->
+			<form action="#" class="login">
+				<input type="text" placeholder="Login" required>
+				<input type="password" placeholder="Password" required>
+				<input type="submit" value="Sign In">
+			</form>
+			<!-- /LOGIN FORM -->
+		</div>
+	</nav>
+			<div class="container">
+			<h2 class="collection-title"><a name="first">Фентезі </a></h2>
+			<div class="collections">
+				<div class="collection-item-outer">
+					<div class="collection-item">
+						<img src="1.jpg" alt="List picture" width="" height="">
+						<div class="collection-text">
+							<h3>Братство персня</h3>
+							<p>Автор - Дж.Р.Р.Толкін<br>
+							<strong>Ціна: 140 грн.</strong>
+							</p>
+							<a href="lord1.html"><button>Більше</button></a>
+						</div>
+					</div>
+				</div>
+				<div class="collection-item-outer">
+					<div class="collection-item">
+						<img src="2.jpg" alt="List picture" width="" height="">
+						<div class="collection-text">
+							<h3>Дві вежі</h3>
+							<p>Автор - Дж.Р.Р.Толкін<br>
+							<strong>Ціна: 150 грн.</strong>
+							</p>
+							<a href="lord2.html"><button>Більше</button></a>
+						</div>
+					</div>
+				</div>
+				<div class="collection-item-outer">
+					<div class="collection-item">
+						<img src="3.jpg" alt="List picture" width="" height="">
+						<div class="collection-text">
+							<h3>Повернення короля</h3>
+							<p>Автор - Дж.Р.Р.Толкін<br>
+							<strong>Ціна: 160 грн.</strong>
+							</p>
+							<a href="lord3.html"><button>Більше</button></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<h2 class="collection-title"><a name="second">Наукова фантастика</a></h2>
+			<div class="collections">
+				<div class="collection-item-outer">
+					<div class="collection-item">
+						<img src="4.jpg" alt="List picture" width="" height="">
+						<div class="collection-text">
+							<h3>Першому гравцеві приготуватися</h3>
+							<p>Автор - Ернест Клайн<br>
+							<strong>Ціна: 150 грн.</strong>
+							</p>
+							<a href=""><button>Більше</button></a>
+						</div>
+					</div>
+				</div>
+				<div class="collection-item-outer">
+					<div class="collection-item">
+						<img src="5.jpg" alt="List picture" width="" height="471px">
+						<div class="collection-text">
+							<h3>Фундація</h3>
+							<p>Автор - Айзек Азімов<br>
+							<strong>Ціна: 90 грн.</strong>
+							</p>
+							<a href=""><button>Більше</button></a>
+						</div>
+					</div>
+				</div>
+				<div class="collection-item-outer">
+					<div class="collection-item">
+						<img src="6.jpg" alt="List picture" width="" height="471px">
+						<div class="collection-text">
+							<h3>Нейромант</h3>
+							<p>Автор - Вільям Гібсон<br>
+							<strong>Ціна: 200 грн.</strong>
+							</p>
+							<a href=""><button>Більше</button></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+		<h2 class="collection-title"><a name="third">Детективи</a></h2>
+			<div class="collections">
+				<div class="collection-item-outer">
+					<div class="collection-item">
+						<img src="7.jpg" alt="List picture" width="" height="">
+						<div class="collection-text">
+							<h3>Передчасне прощання</h3>
+							<p>Автор - Майкл Конеллі<br>
+							<strong>Ціна: 150 грн.</strong>
+							</p>
+							<a href=""><button>Більше</button></a>
+						</div>
+					</div>
+				</div>
+				<div class="collection-item-outer">
+					<div class="collection-item">
+						<img src="8.jpg" alt="List picture" width="" height="471px">
+						<div class="collection-text">
+							<h3>Остання миля</h3>
+							<p>Автор - Девід Балдаччі<br>
+							<strong>Ціна: 190 грн.</strong>
+							</p>
+							<a href=""><button>Більше</button></a>
+						</div>
+					</div>
+				</div>
+				<div class="collection-item-outer">
+					<div class="collection-item">
+						<img src="9.jpg" alt="List picture" width="" height="471px">
+						<div class="collection-text">
+							<h3>Памятливець</h3>
+							<p>Автор - Девід Балдачі<br>
+							<strong>Ціна: 190 грн.</strong>
+							</p>
+							<a href=""><button>Більше</button></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+		<h2 class="collection-title"><a name="fourth">Наукова література</a></h2>
+			<div class="collections">
+				<div class="collection-item-outer">
+					<div class="collection-item">
+						<img src="10.jpg" alt="List picture" width="" height="">
+						<div class="collection-text">
+							<h3>Магія математики</h3>
+							<p>Автор - Артур Бенджамін<br>
+							<strong>Ціна: 150 грн.</strong>
+							</p>
+							<a href=""><button>Більше</button></a>
+						</div>
+					</div>
+				</div>
+				<div class="collection-item-outer">
+					<div class="collection-item">
+						<img src="11.jpg" alt="List picture" width="" height="471px">
+						<div class="collection-text">
+							<h3>Геном</h3>
+							<p>Автор - Метт Рідлі<br>
+							<strong>Ціна: 190 грн.</strong>
+							</p>
+							<a href=""><button>Більше</button></a>
+						</div>
+					</div>
+				</div>
+				<div class="collection-item-outer">
+					<div class="collection-item">
+						<img src="12.jpg" alt="List picture" width="" height="471px">
+						<div class="collection-text">
+							<h3>Астрофізика для тих хто цінує час</h3>
+							<p>Автор - Ніл Деграс Тайсон<br>
+							<strong>Ціна: 190 грн.</strong>
+							</p>
+							<a href=""><button>Більше</button></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<div class="container">
+				<p><b>Copyright © Рокочий</b></p>
+			</div>
+		</footer>
+
+
+</body>
+</html>

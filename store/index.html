@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	 <meta charset="utf-8">
+	 <style type="text/css">
+	 	body{
+	 		padding: 0px;
+	 		margin: 0px;
+	 		background-image: url(back.jpg);
+	 		background-size: 100%;
+	 		background-repeat: no-repeat;
+	 		background-attachment:fixed;
+	 		background-position: center top;
+	 	}
+	 	h1, h3{
+	 		font-family: Comic Sans MS;
+	 		color: #660033;
+	 	}
+	 	/*navigation*/
+	 	ul {
+			margin: 0;
+			padding: 0;
+		}
+		ul li {
+			list-style-type: none;
+		}
+		a {
+			text-decoration: none;
+		}
+		p {
+			font-size: 13px;
+			line-height: 1.3em;
+		}
+		.container {
+			margin: 0 auto;
+			width: 960px;
+		}
+
+		/* HEADER */
+		.header {
+			padding: 50px 0;
+			background-color: yellowgreen;
+		}
+		.header h1,
+		.header h2 {
+			color: greenyellow;
+			text-align: center;
+		}
+
+		/* NAVIGATION */
+		.page-navigation {
+			background-color: #222;
+			border-color: #101010;
+			min-height: 64px;
+		}
+		.page-navigation li {
+			float: left;
+			width: 100px;
+		}
+		.page-navigation a {
+			display: block;
+			color: #9d9d9d;
+			line-height: 4em;
+			font-weight: bold;
+			text-align: center;
+		}
+		.page-navigation li a:hover {
+			color: yellowgreen;
+			background-color: black;
+		}
+
+		/* LOGIN FORM */
+		.login {
+			padding: 15px 0;
+			float: right;
+		}
+		.login input[type="text"],
+		.login input[type="password"] {
+			padding: 5px;
+			margin-right: 5px;
+			border: 1px solid transparent;
+			border-radius: 5px;
+			outline: none;
+		}
+		.login input[type="submit"] {
+			padding: 5px 15px;
+			border: 1px solid lightgrey;
+			border-radius: 5px;
+		}
+		.login input[type="submit"]:hover,
+		button:hover {
+			background-color: darkgrey;
+			color: white;
+		}
+
+		/*main*/
+
+		.why{
+			background-color: white;
+			opacity: 1;
+			margin: 20px auto;
+			width: 960px;
+			border: 2px dashed red;
+			text-align: center;
+			height: 400px;
+		}
+		.car{
+			float: right;
+			margin-right: 30px;
+		}
+		.books{
+			float: left;
+			margin-left: 40px;
+		}
+		.janre{
+			display: inline-block;
+		}
+		.janre img{
+			width: 235px;
+		}
+		.janre p{
+			font-size: 30px;
+			font-family: Comic Sans MS;
+			text-align: center;
+		}
+		footer{
+			padding-top: 20px;
+			font-size: 15px;
+			height: 60px;
+			width: 100%;
+			background-color: #ffffff;
+			opacity: 0.5;
+		}
+		.janre{
+		    opacity: 1;
+		    -webkit-transform: scale(1,1);
+		    -webkit-transition-timing-function: ease-out;
+		    -webkit-transition-duration: 550ms;
+		    -moz-transform: scale(1,1);
+		    -moz-transition-timing-function: ease-out;
+		    -moz-transition-duration: 550ms;
+		}
+		.janre img:hover{
+			-webkit-transform: scale(1.2,1.2);
+		    -webkit-transition-timing-function: ease-out;
+		    -webkit-transition-duration: 550ms;
+		    -moz-transform: scale(1.2,1.2);
+		    -moz-transition-timing-function: ease-out;
+		    -moz-transition-duration: 550ms;
+		}
+		#img_main{
+			margin-top: 20px;
+		}
+
+
+		 </style>
+		 
+	 
+</head>
+<body>
+	<h1 align="center">"Буква"</h1>
+	<h3 align="center">Книжний магазин</h3>
+	<nav class="page-navigation">
+		<div class="container">
+			<ul>
+				<li><a href="index.html">Головна</a></li>
+				<li><a href="books/books.html">Книги</a></li>
+				<li><a href="contakt.html">Контакти</a></li>
+			</ul>
+			<!-- LOGIN FORM -->
+			<form action="#" class="login">
+				<input type="text" placeholder="Login" required>
+				<input type="password" placeholder="Password" required>
+				<input type="submit" value="Sign In">
+			</form>
+			<!-- /LOGIN FORM -->
+		</div>
+	</nav>
+
+	<script type="text/javascript">
+		 	var images = new Array();
+			var i = 0;
+			 
+			images[0] = './read1.jpg';
+			images[1] = './read2.jpg';
+			images[2] = './read3.jpg';
+			 
+			function viewImages() {
+		        document.getElementById("img_main").src = images[i]; 
+		        i++;
+		        if (i == images.length) {
+		            i = 0;
+		        }
+		        setTimeout("viewImages()",5000);
+		    }   
+
+		 </script>
+		 <center>
+		<img src="", id="img_main">
+		</center>
+		<script> viewImages(); </script>
+
+
+			<div class="why">
+				<h1>Чому потрібно вибирати нас</h1>
+				<div class="books"><h3>Великий вибір книг</h3><img src="books.jpg" width="300px" ></div>
+				<div class="car"><h3>Швидка доставка</h3><img src="car.jpg" width="400px"></div>
+			</div>
+		<div class="container">
+			<h1 align="center">Жанри книг</h1>
+			<div class="janre">
+				<img src="1.png">
+				<a href="books/books.html#second"><p>Sci-Fi</p></a>
+			</div>
+			<div class="janre">
+				<img src="2.png">
+				<a href="books/books.html#first"><p>Fantasy</p></a>
+			</div>
+			<div class="janre">
+				<img src="3.png">
+				<a href="books/books.html#third"><p>Детектив</p></a>
+			</div>
+			<div class="janre">
+				<img src="4.png">
+				<a href="books/books.html#fourth"><p>Наукова</p></a>
+			</div>
+	</div>
+		<footer>
+			<div class="container">
+				<p>Copyright © Рокочий</p>
+			</div>
+		</footer>
+
+</body>
+</html>
